@@ -53,9 +53,16 @@ void ContestManager::calculateScores(Contestant& contestant) {
 void ContestManager::displayContestant(const Contestant& contestant) {
     cout << "选手ID: " << contestant.id << ", 姓名: " << contestant.name
          << ", 选手成绩: ";
-    for (double score : contestant.scores) {
-        cout << score << " ";
+    if (contestant.scores.size() == 0) {
+        cout << "-" << " ";
+    } else {
+        cout << "{ ";
+        for (double score : contestant.scores) {
+            cout << score << " ";
+        }
+        cout << "}";
     }
+
     cout << ", 总成绩: " << contestant.totalScore
          << ", 平均成绩: " << contestant.averageScore << endl;
 }
