@@ -15,15 +15,10 @@ int main() {
         switch (userChoice) {
             // 维护学生信息
             case 1: {
-                bool flagMain_ = true;
                 menu.displayMaintainMenu();
                 int typeNum = 0;
-                while (flagMain_ && std::cin >> typeNum && typeNum) {
+                while (std::cin >> typeNum && typeNum) {
                     switch (typeNum) {
-                        case 0: {
-                            flagMain_ = false;
-                            break;
-                        }
                         // 添加上机信息
                         case 1: {
                             std::cout << std::setw(20) << std::setfill('-')
