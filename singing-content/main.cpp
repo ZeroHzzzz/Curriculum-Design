@@ -101,6 +101,8 @@ void ContestManager::deleteContestant() {
 }
 
 void ContestManager::judgeContestant() {
+    if (contestants.size() == 0)
+        return;
     string id;
     cout << "输入选手 ID " << endl << ">";
     cin >> id;
@@ -178,8 +180,12 @@ void ContestManager::sortByJudgeScore() {
 }
 
 void ContestManager::displayAllContestants() {
-    for (const auto& contestant : contestants) {
-        displayContestant(contestant);
+    if (contestants.size() == 0)
+        cout << "当前无选手信息" << endl;
+    else {
+        for (const auto& contestant : contestants) {
+            displayContestant(contestant);
+        }
     }
 }
 
@@ -198,6 +204,7 @@ void ContestManager::saveToFile(const string& filename) {
         }
         file << contestant.totalScore << " " << contestant.averageScore << endl;
     }
+    cout << "保存文件成功!" << endl;
     file.close();
 }
 
@@ -216,6 +223,7 @@ void ContestManager::loadFromFile(const string& filename) {
             contestants.push_back(contestant);
         }
     }
+    cout << "文件载入成功！" << endl;
     file.close();
 }
 
@@ -291,10 +299,12 @@ int main() {
                             break;
                         }
                         case 2: {
+                            manager.displayAllContestants();
                             manager.modifyContestant();
                             break;
                         }
                         case 3: {
+                            manager.displayAllContestants();
                             manager.deleteContestant();
                             break;
                         }
@@ -309,19 +319,23 @@ int main() {
                 break;
             }
             case 2: {
+                manager.displayAllContestants();
                 manager.judgeContestant();
                 break;
             }
             case 3: {
+                manager.displayAllContestants();
                 displaySortMenu();
                 int subChoice = 0;
                 while (cin >> subChoice && subChoice) {
                     switch (subChoice) {
                         case 1:
                             manager.sortContestants();
+                            manager.displayAllContestants();
                             break;
                         case 2:
                             manager.sortByJudgeScore();
+                            manager.displayAllContestants();
                             break;
                         default:
                             cout << "非法输入，请重新输入：" << endl << ">";
