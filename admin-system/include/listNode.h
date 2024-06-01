@@ -1,8 +1,3 @@
-//
-// 链表元素模板类
-// Created by 15928 on 2022/4/22.
-//
-
 #ifndef PROJECT_ABS_LISTNODE_H
 #define PROJECT_ABS_LISTNODE_H
 
@@ -104,4 +99,4 @@ ListNode<T>* ListNode<T>::getPrior() {
     return prior;
 }
 
-#endif  // PROJECT_ABS_LISTNODE_H
+#endif  // LISTNODE_H

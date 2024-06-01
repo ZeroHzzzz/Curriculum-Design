@@ -1,5 +1,3 @@
-// MachineMap.cpp
-
 #include "../include/machine.h"
 #include <fstream>
 #include <iostream>
@@ -46,6 +44,9 @@ void MachineMap::changeMachineStatus(std::string machineNumber,
 }
 
 void MachineMap::updateMachineStatus(Info& former, Info& latter) {
+    if (former.getEndTime() != "-") {
+        return;
+    }
     machineStatus[former.getMachineNum()] = "FREE";
     machineStatus[latter.getMachineNum()] = latter.getNum();
     saveToFile();

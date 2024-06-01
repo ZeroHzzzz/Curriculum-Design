@@ -1,10 +1,5 @@
-//
-// 双向链表模板类
-// Created by 15928 on 2022/4/22.
-//
-
-#ifndef PROJECT_ABS_LIST_H
-#define PROJECT_ABS_LIST_H
+#ifndef LIST_H
+#define LIST_H
 #include <iomanip>
 #include "listNode.h"
 #include "menu.h"
@@ -161,4 +156,4 @@ ListNode<T>* List<T>::getHead() {
     return head;
 }
 
-#endif  // PROJECT_ABS_LIST_H
+#endif  // LIST_H

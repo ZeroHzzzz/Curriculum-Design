@@ -1,7 +1,3 @@
-//
-// Created by 15928 on 2022/5/3.
-//
-
 #include "../include/file_manager.h"
 #include <sstream>
 #include "../include/machine.h"

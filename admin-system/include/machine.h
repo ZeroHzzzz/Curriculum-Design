@@ -1,11 +1,9 @@
-// MachineMap.h
-
 #ifndef MACHINEMAP_H
 #define MACHINEMAP_H
 
 #include <map>
 #include <string>
-#include "student.h"
+#include "info.h"
 class MachineMap {
    public:
     // 更新机器使用状态

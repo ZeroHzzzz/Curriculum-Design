@@ -1,12 +1,7 @@
-//
-// 用户数据的链表类
-// Created by 15928 on 2022/4/26.
-//
-
-#ifndef PROJECT_ABS_USERLIST_H
-#define PROJECT_ABS_USERLIST_H
+#ifndef USERLIST_H
+#define USERLIST_H
+#include "info.h"
 #include "list.h"
-#include "student.h"
 
 class UserList : public List<Info> {
    public:
@@ -28,4 +23,4 @@ class UserList : public List<Info> {
     void swap(ListNode<Info>*, ListNode<Info>*);
 };
 
-#endif  // PROJECT_ABS_USERLIST_H
+#endif  // USERLIST_H

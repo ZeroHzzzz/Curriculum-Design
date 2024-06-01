@@ -1,8 +1,10 @@
-#ifndef PROJECT_ABS_MENU_H
-#define PROJECT_ABS_MENU_H
+#ifndef MENU_H
+#define MENU_H
 #include <iostream>
 class Menu {
    public:
+    void displayUserType();
+
     void displayMainMenu();
 
     void displayMaintainMenu();
@@ -15,4 +17,4 @@ class Menu {
 };
 
 void displayHeader();
-#endif  // PROJECT_ABS_MENU_H
+#endif  // MENU_H

@@ -1,13 +1,8 @@
-//
-// 用户数据链表类的实现文件
-// Created by 15928 on 2022/4/28.
-//
-
 #include "../include/userList.h"
 #include <regex>
 #include <utility>
+#include "../include/info.h"
 #include "../include/machine.h"
-#include "../include/student.h"
 // 空对象
 
 ListNode<Info>* UserList::fetchNode(const std::string& context,
@@ -137,7 +132,7 @@ void UserList::changeNode(std::string context, const std::string& type) {
                   << "5: 上机开始时间" << std::endl
                   << "6: 上机结束时间" << std::endl
                   << "0: 退出" << std::endl
-                  << "<";
+                  << ">";
         int typeNum;
         bool flag = true;
 
@@ -269,7 +264,7 @@ void UserList::sortNode() {
               << "3: 班级" << std::endl
               << "4: 上机时长" << std::endl
               << "0: 返回上级菜单" << std::endl
-              << "<";
+              << ">";
     int type;
     std::cin >> type;
     switch (type) {

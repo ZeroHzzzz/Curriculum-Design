@@ -1,8 +1,14 @@
-//
-// Created by 15928 on 2022/5/3.
-//
 #include "../include/menu.h"
 #include <iomanip>
+void Menu::displayUserType() {
+    std::cout << std::setw(20) << std::setfill('-') << "-" << std::endl;
+    std::cout << "机房收费管理系统" << std::endl;
+    std::cout << "请输入你的用户类型" << std::endl;
+    std::cout << "1: 管理员" << std::endl;
+    std::cout << "2: 学生" << std::endl;
+    std::cout << "0: 退出系统" << std::endl;
+    std::cout << ">";
+}
 void Menu::displayMainMenu() {
     std::cout << std::setw(20) << std::setfill('-') << "-" << std::endl;
     std::cout << "机房收费管理系统" << std::endl;
@@ -29,8 +35,8 @@ void Menu::displayMaintainMenu() {
 void Menu::displayFetchMenu() {
     std::cout << std::setw(20) << std::setfill('-') << "-" << std::endl;
     std::cout << "请输入对应功能前的编号来查询信息" << std::endl
-              << "1: 根据姓名学号进行精确查询" << std::endl
-              << "2: 根据姓名进行精确查询" << std::endl
+              << "1: 根据学号进行查询" << std::endl
+              << "2: 根据姓名进行查询" << std::endl
               << "0: 返回上级菜单" << std::endl;
     std::cout << ">";
 }

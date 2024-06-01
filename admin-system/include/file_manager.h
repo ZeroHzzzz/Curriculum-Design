@@ -1,9 +1,5 @@
-//
-// Created by 15928 on 2022/5/3.
-//
-
-#ifndef PROJECT_ABS_FILE_H
-#define PROJECT_ABS_FILE_H
+#ifndef FILE_H
+#define FILE_H
 
 #include <fstream>
 #include "userList.h"
@@ -22,4 +18,4 @@ class File {
     std::string path;
     std::string fileType;
 };
-#endif  // PROJECT_ABS_FILE_H
+#endif  // FILE_H
