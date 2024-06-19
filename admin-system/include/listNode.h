@@ -1,5 +1,5 @@
-#ifndef PROJECT_ABS_LISTNODE_H
-#define PROJECT_ABS_LISTNODE_H
+#ifndef LISTNODE_H
+#define LISTNODE_H
 
 #include <iostream>
 template <typename T>

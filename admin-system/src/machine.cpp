@@ -57,7 +57,7 @@ void MachineMap::saveToFile() {
     std::ofstream out;
     out.open(path + fileType, std::ios::out);
     if (!out.is_open()) {
-        std::cout << "machines.txt打开失败" << std::endl;
+        std::cerr << "machines.txt打开失败" << std::endl;
         return;
     }
     for (const auto& pair : mp.machineStatus) {

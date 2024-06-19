@@ -35,7 +35,7 @@ void File::add(Info& user) {
     std::ofstream out;
     out.open(path + fileType, std::ios::app);
     if (!out.is_open()) {
-        std::cout << "data.tct文件打开失败" << std::endl;
+        std::cerr << "data.tct文件打开失败" << std::endl;
         return;
     }
     out << user << std::endl;
@@ -50,7 +50,7 @@ void File::change(UserList& userList) {
     std::ofstream out;
     out.open(path + ".temp", std::ios::app);
     if (!out.is_open()) {
-        std::cout << "data.txt文件打开失败" << std::endl;
+        std::cerr << "data.txt文件打开失败" << std::endl;
         return;
     }
     auto ptr = userList.getHead();

@@ -69,7 +69,8 @@ int main() {
     srand(time(0));
 
     int n;
-    bool isStronglyConnected = true;  // true 生成强连通图，false 生成非强联通图
+    bool isStronglyConnected =
+        false;  // true 生成强连通图，false 生成非强联通图
 
     cout << "输入点的个数 > ";
     cin >> n;
